@@ -6,17 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <script src="../js/jquery-3.7.0.js"></script>
-  <script src="/js/index.js"></script>
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/lib/slick-1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="../css/style.css"/>
 </head>
 
 <body>
-  <div id="header">
-  </div>
+  <div id="header"></div>
   <div id="container">
     <div id="prev-main-Btn"></div>
     <div id="container-main-img">
-      <img src="https://www.artinsight.co.kr/data/tmp/2104/20210407060945_kxigfeqr.jpg" alt="" class="img main-img">
+      <ul class="slider">
+        <li class="slide"><img src="https://www.artinsight.co.kr/data/tmp/2104/20210407060945_kxigfeqr.jpg" alt=""
+            class="img main-img"></li>
+        <li class="slide"><img src="https://cdn.edujin.co.kr/news/photo/202007/33372_61168_5353.png" alt=""
+            class="img main-img"></li>
+        <li class="slide"><img src="https://img.khan.co.kr/newsmaker/1457/1457_45.jpg" alt="" class="img main-img"></li>
+        <li class="slide"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL8STE_0zQGrBC3vQDZypxJcrBQ0tfzGO3eg&usqp=CAU"
+            alt="" class="img main-img"></li>
+        <li class="slide"><img src="https://cdn.newsearth.kr/news/photo/202306/11081_12400_059.jpg" alt=""
+            class="img main-img"></li>
+      </ul>
     </div>
     <div id="aft-main-Btn"></div>
     <div id="content-img">
@@ -41,6 +51,8 @@
     </div>
   </div>
   <div id="footer"></div>
+  <script src="/js/index.js"></script>
+  <script type="text/javascript" src="/lib/slick-1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>

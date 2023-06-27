@@ -1,13 +1,59 @@
+/* default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+}
+
+#container {
+    width: 1280px;
+    margin: auto;
+}
+
 ul {
     list-style: none;
 }
 
 .img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 
+/* main container slide */
 .main-img {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
+}
+
+#container-main-img {
+    width: 1280px;
+    height: 400px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.slider{
+    display: flex;
+    margin-left: 400px;
+    margin-top: 30px;
+    width: 400px;
+    overflow: hidden;
+
+}
+
+.slide {
+    transition: transform 1s;
+    transform: translateX(0px);
+}
+
+
+/* contents */
+.contents-img{
+    margin: 1px;
 }

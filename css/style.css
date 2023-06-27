@@ -20,16 +20,17 @@ ul {
     list-style: none;
 }
 
-.img {
+img {
+    width: 400px;
+    height: 400px;
+}
+
+.contents-img{
     width: 200px;
     height: 200px;
 }
 
 /* main container slide */
-.main-img {
-    width: 400px;
-    height: 400px;
-}
 
 #container-main-img {
     width: 1280px;
@@ -43,11 +44,14 @@ ul {
     margin-left: 400px;
     margin-top: 30px;
     width: 400px;
+    height: 400px;
     overflow: hidden;
-
+    
 }
 
 .slide {
+    width: 400px;
+    height: 400px;
     transition: transform 1s;
     transform: translateX(0px);
 }

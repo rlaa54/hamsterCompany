@@ -58,13 +58,17 @@ img {
 .prev-btn {
     float: left;
     top: 200px;
+    transform: rotate(180deg);
+    margin-right: 10px;
 }
 .next-btn {
     float: right;
     top: 200px;
+    margin-left: 10px;
 }
 .prev-btn:hover{
     cursor: pointer;
+    
 }
 .next-btn:hover{
     cursor: pointer;

@@ -3,26 +3,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    
+}
+body{
+    background-image: url("/img/KakaoTalk_20230628_121833218.gif");
+    margin: 0;
 }
 
 img {
     vertical-align: middle;
     border: none;
+    width: 900px;
+    height: 400px;
 }
 
 #container {
     width: 1024px;
     margin: auto;
-}
-
-ul {
-    list-style: none;
-}
-
-img {
-    width: 900px;
-    height: 400px;
 }
 
 /* main container slide */
@@ -41,7 +38,7 @@ img {
     width: 900px;
     height: 400px;
     overflow: hidden;
-    
+    list-style: none;
 }
 
 .slide {
@@ -53,9 +50,10 @@ img {
 
 /* 슬라이더 버튼 */
 .btn {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     position: relative;
+    margin: 3px;
 }
 .prev-btn {
     float: left;
@@ -90,24 +88,35 @@ img {
     margin-left: 50px;
 }
 
-/* login */
-#login {
-    float: right;
-}
-
-.login-img{
-    width: 90px;
-    height: 90px;
-}
 
 /* navigation */
-nav {
-    width: 100px;
-    height: 100px;
-    /* border: 1px solid black; */
-    position: fixed;
-    /* position: absolute; */
-    right: 15%;
-    bottom: 50%;
-}
-
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+    margin: 10px 200px 0px 200px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: white;
+  }
+  .navbar__logo i {
+    padding-left: 0;
+    margin-left: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-right: 20px;
+  }
+  .navbar__menu {
+    list-style: none;
+    display: flex;
+    margin: 0 20px 0 20px;
+    float: right;
+  }
+  
+  .navbar__menu li {
+    padding: 8px 20px;
+  }
+  

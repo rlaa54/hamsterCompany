@@ -12,7 +12,7 @@ img {
 }
 
 #container {
-    width: 1280px;
+    width: 1024px;
     margin: auto;
 }
 
@@ -21,36 +21,30 @@ ul {
 }
 
 img {
-    width: 400px;
+    width: 900px;
     height: 400px;
-}
-
-.contents-img{
-    width: 200px;
-    height: 200px;
 }
 
 /* main container slide */
-
 #container-main-img {
-    width: 1280px;
+    width: 1024px;
     height: 400px;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .slider{
     display: flex;
-    margin-left: 400px;
+    /* margin-left: 50px; */
     margin-top: 30px;
-    width: 400px;
+    width: 900px;
     height: 400px;
     overflow: hidden;
     
 }
 
 .slide {
-    width: 400px;
+    width: 900px;
     height: 400px;
     transition: transform 1s;
     transform: translateX(0px);
@@ -59,5 +53,37 @@ img {
 
 /* contents */
 .contents-img{
-    margin: 1px;
+    width: 200px;
+    height: 200px;
+    margin: 2px;
+    /* margin-left: 15px; */
+}
+
+.contents-img:hover{
+    transform: scale(1.1);
+}
+
+#content-img{
+    margin-left: 30px;
+}
+
+/* login */
+#login {
+    float: right;
+}
+
+.login-img{
+    width: 90px;
+    height: 90px;
+}
+
+/* navigation */
+nav {
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    position: fixed;
+    /* position: absolute; */
+    right: 15%;
+    bottom: 50%;
 }

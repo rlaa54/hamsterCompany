@@ -1,21 +1,22 @@
 // 웹페이지의 넓이
-const viewWidth = 1280;
+const viewWidth = 1024;
 // 메인 이미지의 넓이
-const mainImgWidth = 400;
+const mainImgWidth = 900;
 
 let slidePosition = 0;
 let slideIndex = 0;
 let slide = document.querySelectorAll('.slide');
 $(document).ready(() => {
-
     // imgShow(slideIndex)
     // setInterval(() => {
     //     // console.log('ck')
     //     slideIndex < $slide.length - 1 ? slideIndex++ : slideIndex = 0;
     //     imgShow(slideIndex)
     // }, 4000);
-
-    // autoSlide(true, 2000)
+    autoSlide(true, 2000)
+    $('.contents-img').on('click', ()=>{
+        console.log('ck')
+    })
 })
 
 // 매개변수로 받은 인덱스의 이미지를 보여주는 함수
@@ -44,8 +45,6 @@ const nextSlide = () => {
     for (let i = 0; i < slide.length; i++) {
         slide[i].style.transform = `translateX(${slidePosition}px)`
     }
-
-
 }
 
 // 이미지 슬라이드를 이전 슬라이드로
@@ -68,8 +67,8 @@ const prevSlide = () => {
 }
 
 // 자동으로 다음 슬라이드로
+// @param: isTier(true 반복적으로 호출, false 호출안함)
 // @param: time(1000 => 1초)
-// @param: flag(true 반복적으로 호출, false 호출안함)
 const autoSlide = (isIter, time) => {
     nextSlide();
     // 2초마다 호출되는 이미지 슬라이드 함수
@@ -79,3 +78,4 @@ const autoSlide = (isIter, time) => {
         }, time)
     }
 }
+

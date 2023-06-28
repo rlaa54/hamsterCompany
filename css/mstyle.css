@@ -51,18 +51,20 @@ ul {
 
 /* 슬라이더 버튼 */
 .btn {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     position: relative;
 }
 .prev-btn {
     float: left;
     top: 200px;
     transform: rotate(180deg);
+    margin-right: 10px;
 }
 .next-btn {
     float: right;
     top: 200px;
+    margin-left: 10px;
 }
 .prev-btn:hover{
     cursor: pointer;
@@ -87,7 +89,7 @@ ul {
 
 #content-img{
     margin-top: 40px;
-    margin-left: 50px;
+    margin-left: 80px;
 }
 
 /* login */
@@ -95,7 +97,7 @@ ul {
     float: right;
 }
 
-.login-img{
+.login-nav-img{
     width: 90px;
     height: 90px;
 }
@@ -111,3 +113,7 @@ nav {
     bottom: 50%;
 }
 
+.miniGame-nav-img{
+    width: 10px;
+    height: 10px;
+}

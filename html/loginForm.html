@@ -416,6 +416,7 @@
 
           <button id="button3" class="btn" type="button">Back</button>
           <button id="button2" class="button" type="button">Submit</button>
+
           <!-- 클릭시 회원가입 폼으로 이동시키기 구현-->
           <div class="sign-up">
             <a href="#"></a>
@@ -468,6 +469,11 @@
           "background-image": "url(../img/배틀필드영상.gif)",
           // 배필영상
         });
+      });
+
+      // 링크 이동
+      $("#button2").on("click", () => {
+        window.location.href = "../html/mindex.html";
       });
     </script>
   </body>

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>리뷰페이지</title>
     <style>
+        body{
+            background-image: url(../KakaoTalk_20230628_121833218.gif);
+        }
         .container{
             width: 1500px;
             min-height: 100vh;
@@ -16,6 +19,7 @@
         }
         #side{
             width: 300px;
+            color: whitesmoke
         }
         #side-logo{
             text-align: center;
@@ -25,7 +29,7 @@
             font-size: 30px;
             font-weight: bold;
             text-decoration: none;
-            color: black;
+            color: whitesmoke;
             font-family: Georgia, "Times New Roman", serif;
         }
         #categori{
@@ -46,6 +50,7 @@
             display: flex;
         }
         #game-title{
+            color: whitesmoke;
             position: absolute;
             top: 30px;
             left: 40px;
@@ -68,7 +73,6 @@
             width: 740px;
             height: 350px;
             display: flex;
-            flex-direction: column;
             position: relative;
             top: 110px;
             left: 40px;
@@ -78,6 +82,16 @@
             line-height: 55px;
             padding: 15px;
             box-sizing: border-box;
+        }
+        #info-title{
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+        }
+        #info-main{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
         }
         #review-input{
             width: 1200px;
@@ -91,6 +105,8 @@
             position: relative;
             left: 10px;
             margin: 5px;
+            padding: 0 15px;
+            box-sizing: border-box;
             border-radius: 5px;
             font-size: 20px;
         }
@@ -117,23 +133,69 @@
             width: 0;
             position: absolute; 
             left: 0;
-            color: red;
+            color: #742ecc;
             overflow: hidden;
             pointer-events: none;
         }
         #tag{
-            position: relative;
-            top: 20px;
             width : 50px;
-            height: 50px;
+            height: 80px;
             margin: 5px;
+            padding: 3px;
+            box-sizing: border-box;
+            background-color: #742ecc;
+            border: none;
+            border-radius: 10px;
+            color: rgba(245, 239, 239, 0.9);
+            font-weight: 800;
+            cursor: pointer;
+            text-align: center;
+        }
+        #tag span{
+            position: relative;
+            top:22px;
+            font-size: 20px;
+        }
+        #tag-select{
+            position: absolute;
+            right: 150px;
+            display: none;
+            border-radius: 20px;
+            width: 180px;
+            height: 180px;
+            background-color: rgba(32, 31, 31, 0.881);
+            padding: 10px;
+            box-sizing: border-box;
+            justify-content: space-around;  
+        }
+        #tag-select input{
+            width: 150px;
+        }
+        #tag-select button{
+            padding: 3px 5px;
+            margin: 2px;
+            background-color: #742ecc;
+            border: none;
+            border-radius: 5px;
+            color: rgba(245, 239, 239, 0.9);
+        }
+        #tag-select span{
+            color: whitesmoke;
         }
         #input-btn{
-            position: relative;
-            top: 15px;
-            width: 70px;
-            height: 50px;
+            width: 80px;
+            height: 80px;
             margin: 5px;
+            padding: 3px;
+            box-sizing: border-box;
+            background-color: #742ecc;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            border-color: black;
+            color: rgba(245, 239, 239, 0.9);
+            font-weight: 700;
+            cursor: pointer;
         }
         #review-container{
             width: 1100px;
@@ -144,8 +206,17 @@
             margin: 15px;
         }
         .user-review{
-            display: flex;
             margin: 10px 0;
+        }
+        .user{
+            position: relative;
+            left: 10px;
+            color: whitesmoke;
+            font-size: 18px;
+            font-style: italic;
+        }
+        .review{
+            display: flex;
         }
         .text-box{
             width: 900px;
@@ -166,7 +237,7 @@
             top: 8px;
             left: 20px;
             font-size: 2rem;
-            color: red;
+            color: #742ecc;
         }
         .user-star input {
             width: 100%;
@@ -174,6 +245,11 @@
             position: absolute;
             left: 0;
             opacity: 0;
+        }
+        .user-tag{
+            position: relative;
+            left: 10px;
+            color:whitesmoke
         }
     </style>
 </head>
@@ -201,12 +277,22 @@
                     <img src="" alt="" id="game-img">
                 </div>
                 <div id="game-info">
-                    <span>출시일</span>
-                    <span>출시</span>
-                    <span>플랫폼</span>
-                    <span>장르</span>
-                    <span>개발</span>
-                    <span>모드</span>
+                    <div id="info-title">
+                        <span>출시일</span>
+                        <span>출시</span>
+                        <span>플랫폼</span>
+                        <span>장르</span>
+                        <span>개발</span>
+                        <span>모드</span>
+                    </div>
+                    <div id="info-main">
+                        <span>date</span>
+                        <span>com</span>
+                        <span>form</span>
+                        <span>FPS</span>
+                        <span>개발</span>
+                        <span>모드</span>
+                    </div>
                 </div>
             </div>
 
@@ -219,12 +305,26 @@
                         <input type="range" oninput="drawStar(this)" value="1" step="1" min="0" max="10">
                     </span>
                 </div>
-                <div id="tag"><button>태그 선택</button></div>
-                <button id="input-btn">리뷰<br>남기기</button>
+                <div id="tag"><span>Tag</span></div>
+                <div id="tag-select">
+                    <div  id="tag-input">
+                        <input type="text">
+                        <button class="tag" id="add-btn">추가</button>
+                        <button class="tag" id="remove-btn">초기화</button>
+                    </div>
+                    <!-- <span>액션</span>
+                    <span>슈팅</span>
+                    <span>싱글</span>
+                    <span>협력</span>
+                    <span>참신함</span>
+                    <span>심리적 공포</span>
+                    <span>2d</span>
+                    <span>3d</span> -->
+                </div>
+                <button id="input-btn">submit</button>
             </div>
 
             <div id="review-container">
-                <div class="user-review"></div>
             </div>
 
         </div>
@@ -232,6 +332,7 @@
     </div>
     <script src="../js/jquery-3.7.0.js"></script>
     <script>
+        let userTags = [];
         const drawStar = (target) => {
             let starRating = Math.floor(target.value / 2);
             $('.star span').css('width', `${starRating * 20}%`);
@@ -239,21 +340,48 @@
         const addReview = () => {
             let userInput = $('#user-input').val();
             let starRating = Math.floor($('#star input').val() / 2);
-
-
-            const reviewCode = `
+            let reviewCode = `
                 <div class="user-review">
-                <div class="text-box">
-                    <span>${userInput}</span>
-                </div>
-                <div class="star-box">
-                    <span class="user-star">${'★'.repeat(starRating)}</span>
-                </div>
+                    <div class='user'>
+                        <span>user-id</span>
+                    </div>
+                    <div class='review'>
+                        <div class="text-box">
+                            <span>${userInput}</span>
+                        </div>
+                        <div class="star-box">
+                            <span class="user-star">${'★'.repeat(starRating)}</span>
+                        </div>
+                    </div>
+                    <div class='user-tag'><span>${userTags}</span></div>
                 </div>
             `;
             $('#review-container').append(reviewCode);
-        } 
+            $('#user-input').val('')
+            $('#star input').val('0')
+            $('#star span').css('width', '0')
+            $('#tag-input input').val('')
+            $('#tag-select span').remove()
+            console.log(userTags)
+            userTags=[];
+        }
+        const addTag = ()=>{
+            $('#tag-select').append(`<span>#${$('#tag-input input').val()}</span>`)
+            userTags.push(`#${$('#tag-input input').val()}`)
+            $('#tag-input input').val('')
+        }
+        const resetTag = ()=>{
+            $('#tag-select span').remove()
+            userTags=[];
+        }
+        $('#tag').on('mouseover',()=>{
+            $('#tag-select').css('display','block')
+        })
+        $('#tag-select').on('mouseleave',()=>{
+            $('#tag-select').css('display','none')
+        })        
         $('#input-btn').on('click',addReview)
+        $('#add-btn').on('click',addTag)
     </script>
 </body>
 </html>

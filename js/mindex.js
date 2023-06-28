@@ -14,9 +14,23 @@ $(document).ready(() => {
     //     imgShow(slideIndex)
     // }, 4000);
     autoSlide(true, 2000)
-    $('.contents-img').on('click', ()=>{
+    $('.contents-img').on('click', () => {
         console.log('ck')
     })
+    $('.prev-btn').on('click', () => {
+        console.log('prev')
+        prevSlide()
+        autoSlide(false, 0)
+    })
+    $('.next-btn').on('click', () => {
+        console.log('next')
+        nextSlide()
+        autoSlide(false, 0)
+    })
+
+    setInterval(()=>{
+        autoSlide(true, 2000)
+    },6000)
 })
 
 // 매개변수로 받은 인덱스의 이미지를 보여주는 함수
@@ -70,9 +84,9 @@ const prevSlide = () => {
 // @param: isTier(true 반복적으로 호출, false 호출안함)
 // @param: time(1000 => 1초)
 const autoSlide = (isIter, time) => {
-    nextSlide();
     // 2초마다 호출되는 이미지 슬라이드 함수
     if (isIter) {
+        nextSlide();
         setInterval(() => {
             autoSlide()
         }, time)

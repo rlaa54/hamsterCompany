@@ -39,7 +39,7 @@ $(".movie").on("click", () => {
     visibility: "hidden",
   });
   $("#container").css({
-    "background-image": "url(../img/배틀필드영상.gif)",
+    "background-image": "url(../img/배틀필드.gif)",
     // 배필영상
   });
 });

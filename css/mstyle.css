@@ -1,0 +1,119 @@
+/* default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('/img/star.gif');
+    /* background-color: aqua; */
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+    width: 900px;
+    height: 400px;
+}
+
+#container {
+    width: 1024px;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+/* main container slide */
+#container-main-img {
+    width: 1024px;
+    height: 400px;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.slider{
+    display: flex;
+    /* margin-left: 50px; */
+    margin-top: 30px;
+    width: 900px;
+    height: 400px;
+    overflow: hidden;
+    
+}
+
+.slide {
+    width: 900px;
+    height: 400px;
+    transition: transform 1s;
+    transform: translateX(0px);
+}
+
+/* 슬라이더 버튼 */
+.btn {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+.prev-btn {
+    float: left;
+    top: 200px;
+    transform: rotate(180deg);
+    margin-right: 10px;
+}
+.next-btn {
+    float: right;
+    top: 200px;
+    margin-left: 10px;
+}
+.prev-btn:hover{
+    cursor: pointer;
+}
+.next-btn:hover{
+    cursor: pointer;
+}
+
+/* contents */
+.contents-img{
+    width: 200px;
+    height: 200px;
+    margin: 2px;
+    
+    /* margin-left: 15px; */
+}
+
+.contents-img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#content-img{
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+/* login */
+#login {
+    float: right;
+}
+
+.login-nav-img{
+    width: 90px;
+    height: 90px;
+}
+
+/* navigation */
+nav {
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    position: fixed;
+    /* position: absolute; */
+    right: 15%;
+    bottom: 50%;
+}
+
+.miniGame-nav-img{
+    width: 10px;
+    height: 10px;
+}

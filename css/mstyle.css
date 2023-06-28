@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-image: url('/img/star.gif'); */
+    background-image: url('/img/star.gif');
+    /* background-color: aqua; */
 }
 
 img {
@@ -57,6 +58,7 @@ ul {
 .prev-btn {
     float: left;
     top: 200px;
+    transform: rotate(180deg);
 }
 .next-btn {
     float: right;

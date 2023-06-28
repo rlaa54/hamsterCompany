@@ -3,8 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url('/img/star.gif');
-    /* background-color: aqua; */
+    
+}
+body{
+    background-image: url("/img/KakaoTalk_20230628_121833218.gif");
+    margin: 0;
 }
 
 img {
@@ -17,10 +20,6 @@ img {
 #container {
     width: 1024px;
     margin: auto;
-}
-
-ul {
-    list-style: none;
 }
 
 /* main container slide */
@@ -39,7 +38,7 @@ ul {
     width: 900px;
     height: 400px;
     overflow: hidden;
-    
+    list-style: none;
 }
 
 .slide {
@@ -51,9 +50,10 @@ ul {
 
 /* 슬라이더 버튼 */
 .btn {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: relative;
+    margin: 3px;
 }
 .prev-btn {
     float: left;
@@ -68,6 +68,7 @@ ul {
 }
 .prev-btn:hover{
     cursor: pointer;
+    
 }
 .next-btn:hover{
     cursor: pointer;
@@ -84,36 +85,42 @@ ul {
 
 .contents-img:hover{
     transform: scale(1.1);
-    cursor: pointer;
 }
 
 #content-img{
     margin-top: 40px;
-    margin-left: 80px;
+    margin-left: 50px;
 }
 
-/* login */
-#login {
-    float: right;
-}
-
-.login-nav-img{
-    width: 90px;
-    height: 90px;
-}
 
 /* navigation */
-nav {
-    width: 100px;
-    height: 100px;
-    /* border: 1px solid black; */
-    position: fixed;
-    /* position: absolute; */
-    right: 15%;
-    bottom: 50%;
-}
-
-.miniGame-nav-img{
-    width: 10px;
-    height: 10px;
-}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+    margin: 10px 200px 0px 200px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: white;
+  }
+  .navbar__logo i {
+    padding-left: 0;
+    margin-left: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-right: 20px;
+  }
+  .navbar__menu {
+    list-style: none;
+    display: flex;
+    margin: 0 20px 0 20px;
+    float: right;
+  }
+  
+  .navbar__menu li {
+    padding: 8px 20px;
+  }
+  

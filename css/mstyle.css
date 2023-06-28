@@ -3,12 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    /* background-image: url('/img/star.gif'); */
 }
 
 img {
     vertical-align: middle;
     border: none;
+    width: 900px;
+    height: 400px;
 }
 
 #container {
@@ -18,11 +20,6 @@ img {
 
 ul {
     list-style: none;
-}
-
-img {
-    width: 900px;
-    height: 400px;
 }
 
 /* main container slide */
@@ -83,6 +80,7 @@ img {
 
 .contents-img:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 #content-img{

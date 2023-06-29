@@ -4,7 +4,7 @@ $("#slide > div:gt(0)").hide();
 setInterval(function () {
   $("#slide > div:first")
     .fadeOut(1000)
-    .next()
+    .next(2000)
     .fadeIn(1000)
     .end()
     .appendTo("#slide");
@@ -29,6 +29,16 @@ $("#button3").on("click", () => {
     display: "none",
   });
 });
+//오디오 재생
+let music = new Audio(
+  "../img/이번엔 한국이다! '배틀필드 6' 최초 공개 트레일러 4K (배틀필드 2042) (online-video-cutter.com).mp4"
+);
+function playMusic() {
+  music.play();
+}
+function pauseMusic() {
+  music.pause();
+}
 
 //영상구현
 $(".movie").on("click", () => {
@@ -39,12 +49,27 @@ $(".movie").on("click", () => {
     visibility: "hidden",
   });
   $("#container").css({
-    "background-image": "url(../img/배틀필드영상.gif)",
+    "background-image": "url(../img/배틀필드.gif)",
     // 배필영상
   });
+  $("#audioContainer").css({
+    display: "inherit",
+  });
+  $("#audioContainer2").css({
+    display: "inherit",
+  });
+  playMusic();
 });
 
 // 링크 이동
 $("#button2").on("click", () => {
   window.location.href = "../html/mindex.html";
+});
+
+// 오디오버튼
+$("#audioContainer").on("click", () => {
+  pauseMusic();
+});
+$("#audioContainer2").on("click", () => {
+  playMusic();
 });

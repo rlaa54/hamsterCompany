@@ -14,7 +14,7 @@
 }
 body {
   /* background-color: rgba(0, 0, 0, 0.5); */
-  background-image: url(../img/별사진.gif);
+  background-image: url(../img/별사진.gif);
   /* background-repeat: no-repeat;
                 background-size: cover; */
 }
@@ -22,7 +22,7 @@ body {
   width: 100%;
 
   position: absolute;
-  /* background-image: url(../img/배틀필드영상.gif); */
+  /* background-image: url(../hamsterCompany/img/배틀필드영상.gif); */
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;

@@ -49,7 +49,7 @@ $(".movie").on("click", () => {
     visibility: "hidden",
   });
   $("#container").css({
-    "background-image": "url(../img/배틀필드.gif)",
+    // "background-image": "url(../hamsterCompany/img/배틀필드.gif)",
     // 배필영상
   });
   $("#audioContainer").css({
@@ -63,7 +63,7 @@ $(".movie").on("click", () => {
 
 // 링크 이동
 $("#button2").on("click", () => {
-  window.location.href = "../html/mindex.html";
+  window.location.href = "../index.html";
 });
 
 // 오디오버튼

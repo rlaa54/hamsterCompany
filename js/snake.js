@@ -25,8 +25,8 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
-    this.load.image('food', '../hamsterCompany/img/frog.png');
-    this.load.image('body', '../hamsterCompany/img/snake.png');
+    this.load.image('food', '../img/frog.png');
+    this.load.image('body', '../img/snake.png');
 }
 
 function create ()

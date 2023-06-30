@@ -31,7 +31,7 @@ $("#button3").on("click", () => {
 });
 //오디오 재생
 let music = new Audio(
-  "../img/이번엔 한국이다! '배틀필드 6' 최초 공개 트레일러 4K (배틀필드 2042) (online-video-cutter.com).mp4"
+  "../hamsterCompany/img/이번엔 한국이다! '배틀필드 6' 최초 공개 트레일러 4K (배틀필드 2042) (online-video-cutter.com).mp4"
 );
 function playMusic() {
   music.play();
@@ -49,7 +49,7 @@ $(".movie").on("click", () => {
     visibility: "hidden",
   });
   $("#container").css({
-    "background-image": "url(../img/배틀필드.gif)",
+    // "background-image": "url(../hamsterCompany/img/배틀필드.gif)",
     // 배필영상
   });
   $("#audioContainer").css({
@@ -63,7 +63,7 @@ $(".movie").on("click", () => {
 
 // 링크 이동
 $("#button2").on("click", () => {
-  window.location.href = "../html/mindex.html";
+  window.location.href = "../hamsterCompany/html/mindex.html";
 });
 
 // 오디오버튼
